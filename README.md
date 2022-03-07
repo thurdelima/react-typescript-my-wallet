@@ -87,7 +87,7 @@ Start the server
 
 ```bash
   yarn start
-
+```
 
 
 <br/>
