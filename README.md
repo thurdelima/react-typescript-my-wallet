@@ -1,6 +1,6 @@
 # 📊 My wallet Dashboard
 
-
+##  💡 About project:
 Dashboard created by react, typescript and hooks for view your balance and switch dark or light theme.
 
 <!-- ![alt text](https://raw.githubusercontent.com/thurdelima/react-typescript-my-wallet/master/mywallet1.gif) -->
@@ -62,3 +62,17 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/). -->
+
+
+
+
+
+<br/>
+
+<h4 align="center">
+  ---
+
+Made with ♥   by Arthur Lima :wave: [Get in touch!](https://www.linkedin.com/in/arthur-lima-294ab0103/)
+</h4>
+
+---
