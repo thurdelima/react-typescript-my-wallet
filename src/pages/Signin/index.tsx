@@ -24,12 +24,12 @@ const SignIn: React.FC = () => {
        <Container>
            <Logo>
                <img src={logoImg} alt="Minha Carteira" />
-               <h2>Minha Carteira</h2>
+               <h2>My Wallet</h2>
            </Logo>
 
            <Form onSubmit={() => signIn(email, password)}>
                <FormTitle>
-                  Entrar
+                  Enter
                </FormTitle>
 
                
@@ -43,13 +43,13 @@ const SignIn: React.FC = () => {
                
                 <Input 
                     type="password"
-                    placeholder="senha"
+                    placeholder="password"
                     required
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
 
-               <Button type="submit">Acessar</Button>
+               <Button type="submit">Access</Button>
 
 
            </Form>

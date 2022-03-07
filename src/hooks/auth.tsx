@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext} from 'react';
 
+
 interface IAuthContext {
     logged: boolean;
     signIn(email: string, password: string): void;
@@ -15,6 +16,8 @@ const AuthProvider: React.FC = ({ children }) => {
 
          return !!isLogged;
     });
+
+   
 
 
     const signIn = (email: string, password: string) => {
@@ -33,9 +36,16 @@ const AuthProvider: React.FC = ({ children }) => {
 
 
     const signOut = () => {
+      
         localStorage.removeItem('@minha-carteira:logged');
-
         setLogged(false);
+       
+
+       
+
+        
+
+
     }
 
     return (
