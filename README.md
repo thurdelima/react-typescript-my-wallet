@@ -3,7 +3,20 @@
 
 Dashboard created by react, typescript and hooks for view your balance and switch dark or light theme.
 
+<!-- ![alt text](https://raw.githubusercontent.com/thurdelima/react-typescript-my-wallet/master/mywallet1.gif) -->
 
+<div align="center" >
+  <img src="./mywallet1.gif">
+</div>
+
+
+
+Responsive for other devices.
+
+
+<div align="center" >
+  <img src="./mywallet2.gif">
+</div>
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
