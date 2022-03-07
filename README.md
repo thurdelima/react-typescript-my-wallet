@@ -63,7 +63,30 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/). -->
 
+## Run Locally
 
+Clone the project
+
+```bash
+  git clone https://github.com/thurdelima/react-typescript-my-wallet
+```
+
+Go to the project directory
+
+```bash
+  cd react-typescript-my-wallet
+```
+
+Install dependencies
+
+```bash
+  yarn install or yarn
+```
+
+Start the server
+
+```bash
+  yarn start
 
 
 
