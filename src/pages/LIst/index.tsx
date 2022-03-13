@@ -24,10 +24,18 @@ interface IData {
 
 }
 
+interface IRouteParams {
+    match: {
+        params: {
+            type: string;
+        }
+    }
+}
 
 
 
-const List: React.FC = () => {
+const List: React.FC<IRouteParams> = ({ match }) => {
+// const List: React.FC = () => {
 
     //const t = match.params.type ?  match.params.type : '';
     const [data, setData] = useState<IData[]>([]);
@@ -37,13 +45,30 @@ const List: React.FC = () => {
 
     //console.log(yearSelected, monthSelected);
     
-    const { type } = useParams();
+    //const { type } = useParams();
 
-    const titleOptions = useMemo(() => {
-      return type === 'entry-balance'
-        ? { title: 'Entradas', lineColor: '#4E41F0' }
-        : { title: 'Saídas', lineColor: '#E44C4E' };
-    }, [type]);
+    const type = match.params.type;
+
+    // const titleOptions = useMemo(() => {
+    //   return type === 'entry-balance'
+    //     ? { title: 'Entradas', lineColor: '#4E41F0' }
+    //     : { title: 'Saídas', lineColor: '#E44C4E' };
+    // }, [type]);
+
+    const pageData = useMemo(() => {
+        return type === 'entry-balance' ?
+            {
+                title: 'Entradas',
+                lineColor: '#4E41F0',
+                data: gains
+            }
+            :       
+            {
+                title: 'Saídas',
+                lineColor: '#E44C4E',
+                data: expenses
+            }       
+    },[type]);
 
 
     // const months = [
@@ -166,8 +191,8 @@ const List: React.FC = () => {
 
     return (
        <Container>
-           <ContentHeader title={titleOptions.title}
-        lineColor={titleOptions.lineColor} >
+           <ContentHeader title={pageData.title}
+        lineColor={pageData .lineColor} >
                 <SelectInput defaultValue={monthSelected} options={months} onChange={(e) => setMonthSelected(e.target.value)}  />
                 <SelectInput options={years} onChange={(e) => setYearSelected(e.target.value)} defaultValue={yearSelected} />
 

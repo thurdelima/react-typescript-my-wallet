@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Dashboard from '../pages/Dashboard';
 import List from '../pages/LIst';
@@ -7,10 +7,10 @@ import Layout from '../components/Layout';
 
 const AppRoutes: React.FC = () => (
     <Layout>
-        <Routes>
-            <Route   path="/" element={<Dashboard />} />
-            <Route path="/list/:type"  element={<List  />} />
-        </Routes>
+        <Switch>
+        <Route path="/" exact component={Dashboard} />
+            <Route path="/list/:type" exact component={List} />
+        </Switch>
     </Layout>
 );
 
